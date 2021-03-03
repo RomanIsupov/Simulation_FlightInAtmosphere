@@ -28,7 +28,6 @@ namespace Simulation_FlightInAtmosphere.Flight
         public void SetParameters(double angle, double v0, double y0, double weight, double area)
         {
             k = 0.5 * C * area * RHO / weight;
-            
             vx = GetSpeed(v0, new TrigonometricFunction(Math.Cos), angle);
             vy = GetSpeed(v0, new TrigonometricFunction(Math.Sin), angle);
             point.x = 0;
